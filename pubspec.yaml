@@ -1,0 +1,40 @@
+name: builder_android
+description: "A new Flutter project."
+
+publish_to: 'none'  # Удалите эту строку, если хотите опубликовать на pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"  # Указываем минимальную и максимальную версию SDK
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8  # Для iOS-стиля иконок
+  http: ^1.2.2
+  # Для работы с HTTP-запросами
+  # Добавьте другие зависимости, если нужно
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0  # Для рекомендаций по стилю кода
+
+flutter:
+  uses-material-design: true  # Указывает на использование Material Design
+  assets:
+    - assets/text.json
+
+  # Пример добавления активов (если понадобятся изображения или другие файлы)
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # Пример добавления кастомных шрифтов (если понадобятся)
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic

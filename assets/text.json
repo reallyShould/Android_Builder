@@ -1,0 +1,12 @@
+{
+  "main_label": "Builder",
+  "author_label": "by reallyShould",
+  "dropdown_price_text": "Price",
+  "dropdown_conf_text": "Select configuration",
+  "dropdown_cpu_text": "Select CPU",
+  "dropdown_gpu_text": "Select GPU",
+  "error_fields_text": "Please fill all fields before proceeding",
+  "button_build_text": "BUILD",
+  "label_about_text": "About",
+  "label_about_body_text": "Welcome to the Builder App!\n\nThis app is designed to help you configure and build your ideal computer setup based on your specific needs. Whether you're looking for a high-performance gaming rig, a reliable workstation, or a powerful graphics machine, this app provides easy-to-use options to select your preferred CPU, GPU, and configuration."
+}
