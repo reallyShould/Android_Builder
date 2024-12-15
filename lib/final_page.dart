@@ -9,6 +9,7 @@ class FinalPage extends StatelessWidget {
     final config = arguments['config'];
     final cpu = arguments['cpu'];
     final gpu = arguments['gpu'];
+    final mode = arguments["mode"];
 
     return Scaffold(
       backgroundColor: Colors.black87,
@@ -26,7 +27,7 @@ class FinalPage extends StatelessWidget {
         ),
       ),
       body: FutureBuilder(
-        future: ApiService.getBuildDetails(price, config, cpu, gpu),
+        future: ApiService.getBuildDetails(price, config, cpu, gpu, mode),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());

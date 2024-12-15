@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static Future<Map<String, dynamic>> getBuildDetails(String price, String config, String cpu, String gpu) async {
+  static Future<Map<String, dynamic>> getBuildDetails(String price, String config, String cpu, String gpu, String mode) async {
     final response = await http.post(
       Uri.parse('https://reallys.pythonanywhere.com/build'),
       headers: {
@@ -13,6 +13,7 @@ class ApiService {
         'cfg': config,
         'cpu': cpu,
         'gpu': gpu,
+        'mode': mode
       }),
     );
 

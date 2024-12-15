@@ -5,6 +5,7 @@
   "dropdown_conf_text": "Select configuration",
   "dropdown_cpu_text": "Select CPU",
   "dropdown_gpu_text": "Select GPU",
+  "dropdown_mode_text": "Select mode",
   "error_fields_text": "Please fill all fields before proceeding",
   "button_build_text": "BUILD",
   "label_about_text": "About",

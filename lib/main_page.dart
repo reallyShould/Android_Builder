@@ -12,6 +12,7 @@ class _MainPageState extends State<MainPage> {
   String? _config;
   String? _cpu;
   String? _gpu;
+  String? _mode;
 
   String _main_label_text = '';
   String _author_text = '';
@@ -19,6 +20,7 @@ class _MainPageState extends State<MainPage> {
   String _dropdown_conf_text = '';
   String _dropdown_cpu_text = '';
   String _dropdown_gpu_text = '';
+  String _dropdown_mode_text = '';
   String _error_fields_text = '';
   String _button_build_text = '';
   String _label_about_text = '';
@@ -41,6 +43,7 @@ class _MainPageState extends State<MainPage> {
       _dropdown_conf_text = data['dropdown_conf_text'];
       _dropdown_cpu_text = data['dropdown_cpu_text'];
       _dropdown_gpu_text = data['dropdown_gpu_text'];
+      _dropdown_mode_text = data['dropdown_mode_text'];
       _error_fields_text = data['error_fields_text'];
       _button_build_text = data['button_build_text'];
       _label_about_text = data['label_about_text'];
@@ -143,7 +146,7 @@ class _MainPageState extends State<MainPage> {
                 });
               },
               dropdownColor: Colors.grey[800],
-              items: <String>['INTEL', 'AMD']
+              items: <String>['INTEL', 'AMD', "Any"]
                   .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -168,7 +171,29 @@ class _MainPageState extends State<MainPage> {
                 });
               },
               dropdownColor: Colors.grey[800],
-              items: <String>['NVIDIA', 'AMD']
+              items: <String>['NVIDIA', 'AMD', "Any"]
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value, style: TextStyle(color: Colors.white)),
+                );
+              }).toList(),
+            ),
+
+            DropdownButton<String>(
+              isExpanded: true,
+              value: _mode,
+              hint: Text(
+                _dropdown_mode_text,
+                style: TextStyle(color: Colors.white),
+              ),
+              onChanged: (newValue) {
+                setState(() {
+                  _mode = newValue;
+                });
+              },
+              dropdownColor: Colors.grey[800],
+              items: <String>['Best', 'Best of seven']
                   .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -195,6 +220,7 @@ class _MainPageState extends State<MainPage> {
                       'config': _config,
                       'cpu': _cpu,
                       'gpu': _gpu,
+                      'mode': _mode,
                     },
                   );
                 } else {
