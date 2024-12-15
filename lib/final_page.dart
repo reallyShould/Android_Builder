@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'api_service.dart';
 
 class FinalPage extends StatelessWidget {
+  const FinalPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final arguments = ModalRoute.of(context)!.settings.arguments as Map;

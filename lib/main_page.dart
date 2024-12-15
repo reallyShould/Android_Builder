@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
+  const MainPage({super.key});
+
   @override
   _MainPageState createState() => _MainPageState();
 }
